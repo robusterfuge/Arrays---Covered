@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <string.h>
+
+
+void compute(int);
+main()
+{
+int a[40]={0};
+int N;
+scanf("%d",&N);
+int i;
+for(i=1;i<=N;i++){
+    scanf("%d",&a[i]);
+}
+
+for(i=1;i<=N;i++){
+    compute(a[i]);
+}
+
+}
+
+
+void compute(int N){
+    
+      
+  int five=0,three=0 ;
+  int i;
+  for(i=3;i<=N;i++){
+      
+     
+    if(i%3 == 0){
+        
+        if((N-i)%5 == 0){
+            
+            
+            printf("5-%d 3-%d  \n\n",i,N-i);
+            five=i;
+            three=N-i;
+            break;
+        }
+    }
+    
+     if(i%5 == 0){
+        
+        if((N-i)%3 == 0){
+            
+            
+            printf("5-%d 3-%d \n\n",N-i,i);
+            five=N-;
+            three=N-i;
+           break;
+        }
+    }
+    
+ 
+      
+  }
+     int k,m;
+ 
+         for(k=1;k<=five;k++)
+            printf("5");
+    
+         for(m=1;m<=three;m++)
+            printf("3");
+            
+         if(five == 0 && three == 0)   printf("-1");
+        
+        printf("\n");
+  
+}
